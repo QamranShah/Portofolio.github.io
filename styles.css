@@ -1,196 +1,481 @@
+/* This is our CSS code, and we're making it look cooler! 🎉 */
+
+/* Set the style for all elements in our web page */
 * {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
-  }
-  
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* We want the main container to take up the whole screen! 📏 */
 .container {
-   
-    width: 100%;
-    min-height: 100vh;
-    padding-left: 8%;
-    padding-right: 8%;
-    box-sizing: border-box;
-    overflow: hidden;
+  width: 100%;
+  min-height: 100vh;
+  padding-left: 8%;
+  padding-right: 8%;
+  box-sizing: border-box;
+  overflow: hidden;
 }
-.navbar{
 
-    width: 100%;
-    display: flex;
-    align-items: center;
+/* The navigation bar will be at the top! 💫 */
+.navbar {
+  width: 100%;
+  display: flex;
+  align-items: center;
 }
-.logo{
-    width: 50px;
-    cursor: pointer;
-    margin: 30px 0;
+
+/* Our logo is small and clickable! 💻 */
+.logo {
+  width: 50px;
+  cursor: pointer;
+  margin: 30px 0;
 }
-.menu-icon{
-    width: 25px;
-    cursor: pointer;
-    display: none;
+
+/* A tiny menu icon that we'll show on smaller screens! 🍔 */
+.menu-icon {
+  width: 25px;
+  cursor: pointer;
+  display: none;
 }
-nav{
-    flex: 1;
-    text-align: right;
- }
-nav ul li{
-    list-style: none;
-    display: inline-block;
-    margin-right: 30px;
+
+/* Our navigation items will be on the right side! ➡️ */
+nav {
+  flex: 1;
+  text-align: right;
 }
-nav ul li a{
-    text-decoration: none;
-    color: #000;
-    font-size: 14px;
+
+/* These are the items in our navigation bar! 📝 */
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin-right: 30px;
 }
-nav ul li a:hover{
-    color: #ff5ea2;
+
+/* When we hover over the navigation links, they turn pink! 💖 */
+nav ul li a {
+  text-decoration: none;
+  color: #fff; /* White color for the links */
+  font-size: 14px;
 }
-.row{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 100px 0;
+
+nav ul li a:hover {
+  color: #ff5ea2; /* Neon pink color on hover! 🎆 */
 }
+
+/* The main content row is where all the action happens! 💥 */
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 100px 0;
+}
+
+/* The left column takes up 40% of the space! 📜 */
 .col-1 {
-    flex-basis: 40%;
-    position: relative;
-    margin-left: 50px;
-}
-.col-1 h2{
-    font-size: 54px;
-}
-.col-1 h3{
-    font-size: 30px;
-    color: #707070;
-    font-weight: 100;
-    margin: 20px 0 10px;    
-}
-.col-1 p{
-    font-size: 16px;
-    color: b7b7b7;
-    font-weight: 100;
-    margin: 30px 0;
-}
-button{
-    width: 140px;
-    border: 0;
-    padding: 12px 10px;
-    outline: none;
-    color: #fff;
-    background: linear-gradient(to right, #fb5283, #ff3527);
-    border-radius: 6px;
-    cursor: pointer;
-    transition: width 0.5s ;
-}
-button img{
-     
-    width: 30px;
-    display: none;
-}
-button:hover img{
-    display: block;
-}
-button:hover{
-    width: 160px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-.col-1::after{
-    content: '';
-    width: 10px;
-    height: 57%;
-    background: linear-gradient(#ff469f,#ff6062);
-    position: absolute;
-    left: -40px;
-    top: 8px;
-}
-.col-2{
-    position: relative;
-    flex-basis: 60%;
-    display: flex;
-    align-items: center;
-}
-.col-2 .qamran{
-    width: 72%;
-}
-.color-box{
-    position: absolute;
-    right: 0;
-    top: 0;
-    background: linear-gradient(#ff54a2,#ff575a);
-    border-radius: 20px 0 0 20px;
-    height: 100%;
-    width: 120%;
-    z-index: -1;
-    transform: translateX(150px);
-}
-.add-btn img{
-    width: 30px;
-    margin-bottom: 5px;
-}
-.add-btn{
-    text-align: center;
-    color: #fff;
-    cursor: pointer;
-}
-.social-links img{
-    height: 20px;
-    margin: 20px;
-    cursor: pointer;
-}
-.social-links{
-    text-align: center;
+  flex-basis: 40%;
+  position: relative;
+  margin-left: 50px;
 }
 
-@media only screen and (max-width:700px)
-{
-      nav ul{
-        width: 40%;
-        background: linear-gradient(#ff54a2, #ff575a);
-        position: absolute;
-        top: 75px;
-        right: 0;
-        z-index: 2;
-      }
-      nav ul li{
-        display: block;
-        margin-top: 10px;
-        margin-bottom: 10px;
-        font-size: 2px;
-      }
-      nav ul li a{
-        color: #fff;
-      }
-      .menu-icon{
-        display: block;
-      }
-      #menuList{
-        overflow: hidden;
-        transition: 0.5s;
-      }
-      .row{
-        flex-direction: column-reverse;
-        margin: 50px 0;
-      }
-      .col-2{
-        flex-basis: 100%;
-        margin-bottom: 50px;
-      }
-      .col-2 .qamran{
-        width: 60%;
-      }
-      .color-box{
-        transform: translateX(60px);
-      }
-      .col-1{
-        flex-basis: 100%;
-      }
-      .col-1 h2{
-        font-size: 35px;
-      }
-      .col-1 h3{
-        font-size: 15px;
-      }
+/* Big and bold heading! 📢 */
+.col-1 h2 {
+  font-size: 54px;
+  color: #fff; /* White color for the heading */
 }
+
+/* Subheading with a touch of gray! 🌧️ */
+.col-1 h3 {
+  font-size: 30px;
+  color: #707070; /* A light gray color */
+  font-weight: 100;
+  margin: 20px 0 10px;
+}
+
+/* Our paragraphs are also a light gray color! 🌫️ */
+.col-1 p {
+  font-size: 16px;
+  color: #b7b7b7; /* Another light gray color */
+  font-weight: 100;
+  margin: 30px 0;
+}
+
+/* This is the awesome button! 🎇 */
+button {
+  width: 140px;
+  border: 0;
+  padding: 12px 10px;
+  outline: none;
+  color: #fff; /* White color for the button text */
+  background: linear-gradient(
+    to right,
+    #f759ab,
+    #e3214e
+  ); /* Neon gradient for the button! 🌈 */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: width 0.5s;
+}
+
+/* When we hover over the button, it becomes even more awesome! 🎆 */
+button img {
+  width: 30px;
+  display: none;
+}
+
+button:hover img {
+  display: block;
+}
+
+button:hover {
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* This adds a cool effect to the left side of the column! ✨ */
+.col-1::after {
+  content: '';
+  width: 10px;
+  height: 57%;
+  background: linear-gradient(
+    to bottom,
+    #f759ab,
+    #e3214e
+  ); /* Neon gradient on the left side! 🌈 */
+  position: absolute;
+  left: -40px;
+  top: 8px;
+}
+
+/* The right column takes up 60% of the space! 📊 */
+.col-2 {
+  position: relative;
+  flex-basis: 60%;
+  display: flex;
+  align-items: center;
+}
+
+/* The Qamran image is part of the right column! 🖼️ */
+.col-2 .qamran {
+  width: 72%;
+}
+
+/* This is the fancy color box that adds some pizzazz! 🎨 */
+.color-box {
+  position: absolute;
+  right: 0;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    #f759ab,
+    #e3214e
+  ); /* Neon gradient for the color box! 🌈 */
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 120%;
+  z-index: -1;
+  transform: translateX(150px);
+}
+
+/* Add buttons and social links to the color box! 🎨 */
+.add-btn img {
+  width: 30px;
+  margin-bottom: 5px;
+}
+
+.add-btn {
+  text-align: center;
+  color: #fff; /* White color for the button text */
+  cursor: pointer;
+}
+
+.social-links img {
+  height: 20px;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.social-links {
+  text-align: center;
+}
+
+/* On smaller screens, the navigation bar becomes a slide-out menu! 🍔 */
+@media only screen and (max-width: 700px) {
+  nav ul {
+    width: 100%;
+    background: linear-gradient(
+      to right,
+      #f759ab,
+      #e3214e
+    ); /* Neon gradient for the slide-out menu! 🌈 */
+    position: absolute;
+    top: 75px;
+    right: 0;
+    z-index: 2;
+  }
+  nav ul li {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 2px;
+  }
+  nav ul li a {
+    color: #fff; /* White color for the links */
+  }
+  .menu-icon {
+    display: block;
+  }
+  #menuList {
+    overflow: hidden;
+    transition: 0.5s;
+  }
+  .row {
+    flex-direction: column-reverse;
+    margin: 50px 0;
+  }
+  .col-2 {
+    flex-basis: 100%;
+    margin-bottom: 50px;
+  }
+  .col-2 .qamran {
+    width: 60%;
+  }
+  .color-box {
+    transform: translateX(60px);
+  }
+  .col-1 {
+    flex-basis: 100%;
+  }
+  .col-1 h2 {
+    font-size: 35px;
+  }
+  .col-1 h3 {
+    font-size: 15px;
+  }
+}
+
+/* Here are the animations! 🔮 */
+
+/* Animation for elements coming from the right side! */
+@keyframes slideFromRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for the color box coming from the left side! */
+@keyframes slideColorBoxFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Animation for elements coming from the left side! */
+@keyframes slideFromLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* Apply the animations to the respective elements! */
+.col-1 h2,
+.col-1 h3,
+.col-1 p {
+  animation: slideFromRight 1s ease forwards;
+}
+
+.color-box {
+  animation: slideColorBoxFromLeft 1s ease forwards;
+  position: absolute;
+  left: 0;
+  top: 0;
+  background: linear-gradient(
+    to right,
+    #f759ab,
+    #e3214e
+  ); /* Neon gradient for the color box! 🌈 */
+  border-radius: 20px 0 0 20px;
+  height: 100%;
+  width: 120%;
+  z-index: -1;
+}
+
+.col-2 .qamran,
+.color-box {
+  animation: slideFromLeft 1s ease forwards;
+}
+
+.social-links {
+  animation: slideFromRight 1s ease forwards;
+}
+
+.social-links img {
+  animation: slideFromRight 1s ease forwards;
+}
+
+/* Add delays for social media links to create a cool sequence! 🎵 */
+.social-links img:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.social-links img:nth-child(2) {
+  animation-delay: 1.2s;
+}
+
+/* The pulsating animation for the awesome button! 🔥 */
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the pulsating animation to the button! 🎉 */
+button {
+  width: 140px;
+  border: 0;
+  padding: 12px 10px;
+  outline: none;
+  color: #fff; /* White color for the button text */
+  background: linear-gradient(
+    to right,
+    #f759ab,
+    #e3214e
+  ); /* Neon gradient for the button! 🌈 */
+  border-radius: 6px;
+  cursor: pointer;
+  transition: width 0.5s;
+  animation: pulsate 2s infinite; /* Apply the pulsating animation! */
+}
+
+/* When we hover over the button, it becomes even more awesome! 🎆 */
+button:hover {
+  animation: pulsate 1s infinite; /* Adjust the pulsating animation on hover */
+  width: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* Finally, let's set the background color to black! 🌚 */
+body {
+  background-color: #383838; /* Black background */
+}
+@keyframes pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/* Apply the pulsating animation to social media icons! 🎉 */
+.social-links img {
+  animation: pulsate 1.5s infinite;
+}
+
+/* Add delays for social media links to create a cool sequence! 🎵 */
+.social-links img:nth-child(1) {
+  animation-delay: 1s;
+}
+
+.social-links img:nth-child(2) {
+  animation-delay: 1.2s;
+}
+/* Footer with gradient background for social links */
+.footer {
+  background: linear-gradient(
+    to right,
+    #f759ab,
+    #e3214e
+  ); /* Neon green gradient for the footer! 🌈 */
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links img {
+  height: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+/* Footer with gradient background for social links */
+.footer {
+  background: linear-gradient(
+    to right,
+    #f759ab,
+    #e3214e
+  ); /* Neon green gradient for the footer! 🌈 */
+  padding: 30px 0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+
+/* Social links */
+.social-links {
+  display: flex;
+  align-items: center;
+}
+
+.social-links img {
+  height: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+}
+
+/* Your name and copyright information */
+.footer-text {
+  color: #fff; /* White color for the text */
+  font-size: 14px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+/* Style for the text within the footer */
+.footer-text span {
+  font-weight: bold;
+}
+
+/* To center align the footer text and social links */
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
