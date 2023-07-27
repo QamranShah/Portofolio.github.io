@@ -24,10 +24,8 @@
                     <h2>Hello, I am<br>Qamran Shah</h2>
                     <h3>A Software Engineer</h3>
                     <p>Front-end & Back-end Developer</p>
-                    <button type="button">My CV 
-                        <a href="images/qamnrancv.pdf" target="_blank" rel="noopener noreferrer"></a>
-                        <img src="images/arrow.png">
-                    </button>
+                    <button type="button" onclick="openCV()">My CV 
+                      <img src="images/arrow.png"> </button>
                 </div>
                 <div class="col-2">
                  <img src="images/qamran.png" class="qamran">
@@ -46,7 +44,7 @@
                 <a href="https://wa.link/3b73qv"><img src="images/whatsapp-logo.png"></as>
             </div>
             <div class="footer-text">
-                <span>Qamran Shah &copy; 2023</span>
+                <span>Qamran Shah. All rights reserved. &copy; 2023</span>
               </div>
             </div>
           </footer>
@@ -67,5 +65,10 @@
             }
          </script>
 
+         <script>
+            function openCV() {
+              window.open('qamrancv.pdf', '_blank');
+            }
+          </script>
     </body>
 </html>
