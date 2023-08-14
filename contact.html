@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="contactstyles.css">
+  <title>Contact Me</title>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <a href="index.html">
+                <img src="images/logo.png" class="logo">
+                </a>
+            <nav>
+                <ul id="menuList">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <img src="images/menu.png" class="menu-icon" onclick="togglemenu()">
+        </div>
+  <div class="container">
+    <div class="row">
+      <div class="col-1">
+        <h2>Contact Me</h2>
+        <p>If you have any questions or inquiries, <br> feel free to get in touch with me using the form below:</p>
+      </div>
+      <div class="col-2">
+        <div class="contact-form">
+          <h3>Get in Touch</h3>
+          <form id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <textarea id="message" placeholder="Your Message" required></textarea>
+            <button class="pulsating-button" type="submit">Send Message</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+    <footer class="footer">
+        <div class="footer-content">
+          <div class="social-links">
+        <a href="https://www.linkedin.com/in/qamran-shah-a5aa17255"><img src="images/linkedin-logo.png"></a>
+        <a href="https://www.instagram.com/notqamran/"><img src="images/instagram-logo.png"></a>
+        <a href="https://github.com/qamranshah"><img src="images/github-logo.png"></a>
+        <a href="https://twitter.com/QamranShah"><img src="images/twitter-logo.png"></a>
+        <a href="https://wa.link/3b73qv"><img src="images/whatsapp-logo.png"></a>
+    </div>
+    <div class="footer-text">
+        <span>All rights reserved, 2023 &copy; Qamran Shah</span>
+      </div>
+    </div>
+  </footer>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const contactForm = document.getElementById("contactForm");
+      const nameInput = document.getElementById("name");
+      const emailInput = document.getElementById("email");
+      const messageInput = document.getElementById("message");
+
+      contactForm.addEventListener("submit", function (e) {
+        e.preventDefault();
+        // Add your form submission logic here
+        // You can use the values from nameInput, emailInput, and messageInput
+        // to send the message or perform other actions.
+        alert("Message sent successfully!");
+        // You can replace the alert with your own logic.
+        nameInput.value = "";
+        emailInput.value = "";
+        messageInput.value = "";
+      });
+    });
+  </script>
+</body>
+</html>
